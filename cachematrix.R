@@ -23,8 +23,8 @@ makeCacheMatrix<-function(x=matrix()){
 }
 
 ## cacheSolve calculates the inverse of the desired matrix
-## If an ivnerse has already been calculated, the cached inverse will be returned
-## rather repeating the same calculation
+## If an inverse has already been calculated, the cached inverse 
+## will be returnedrather repeating the same calculation
 
 cacheSolve<-function(x,...){
   ## Get the vlaue of the inverse
@@ -34,7 +34,7 @@ cacheSolve<-function(x,...){
     message("getting cached data")
     return(m)
   }
-  ## Get the matrix, obtain the inverse using "solve", then set the inverse matrix
+  ## Get the matrix, obtain the inverse using "solve", then set inverse matrix
   data <- x$get()
   m <- solve(data, ...)
   x$setinverse(m)
